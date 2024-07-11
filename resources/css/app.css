@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media screen and (max-width: 768px) {
+    #nav-menu.--state-open {
+        background: black;
+        color: white;
+        transform: translateY(0%);
+    }
+    #toggle-nav-button.--state-open > * {
+        background: white;
+    }
+    #toggle-nav-button.--state-open > :first-child {
+        transform-origin: top left;
+        transform: rotate(45deg);
+    }
+    #toggle-nav-button.--state-open > :nth-child(2) {
+        transform: scaleY(0);
+    }
+    #toggle-nav-button.--state-open > :last-child {
+        transform-origin:bottom left;
+        transform: rotate(-45deg);
+    }
+}
