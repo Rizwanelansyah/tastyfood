@@ -10,50 +10,7 @@
 
 <body class="bg-primary overflow-x-hidden">
     <div class="md:hidden h-[60vh] w-full z-[-5] bg-gradient-to-b from-white to-transparent absolute"></div>
-    <nav id="navbar"
-        class="md:h-[20vh] flex flex-row justify-between md:justify-start items-center gap-10 py-4 px-5 md:py-8 md:px-20">
-        <h1 class="font-bold text-2xl">TASTY FOOD</h1>
-        <ul id="nav-menu"
-            class="text-sm flex flex-col px-5 py-10 md:p-0 md:flex-row justify-center items-center gap-8 absolute top-0 left-0 md:static w-full md:w-[unset] transition-all duration-300 translate-y-[-100%] md:transform-none">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">TENTANG</a></li>
-            <li><a href="#">BERITA</a></li>
-            <li><a href="#">GALERI</a></li>
-            <li><a href="#">KONTAK</a></li>
-        </ul>
-        <div id="toggle-nav-button"
-            class="md:hidden h-8 w-10 flex flex-col items-center justify-around z-50 cursor-pointer">
-            <span class="bg-black rounded-full h-1.5 w-8 transition-all duration-300"></span>
-            <span class="bg-black rounded-full h-1.5 w-8 transition-all duration-300"></span>
-            <span class="bg-black rounded-full h-1.5 w-8 transition-all duration-300"></span>
-        </div>
-    </nav>
-    <script>
-        const toggleNavButton = document.getElementById("toggle-nav-button");
-        const navMenu = document.getElementById("nav-menu");
-        let isOpen = false;
-        if (window.matchMedia('screen and (max-width: 768px)').matches) {
-            navMenu.classList.add("w-full")
-            toggleNavButton.onclick = () => {
-                isOpen = !isOpen;
-                if (isOpen) {
-                    navMenu.classList.add("--state-open")
-                    toggleNavButton.classList.add("--state-open")
-                } else {
-                    navMenu.classList.remove("--state-open")
-                    toggleNavButton.classList.remove("--state-open")
-                }
-            };
-        } else {
-            if (isOpen) {
-                navMenu.classList.add("--state-open")
-                toggleNavButton.classList.add("--state-open")
-            } else {
-                navMenu.classList.remove("--state-open")
-                toggleNavButton.classList.remove("--state-open")
-            }
-        }
-    </script>
+    <x-navbar />
     <section id="main" class="flex flex-col md:flex-row md:gap-10 md:h-[80vh] md:relative">
         <div class="flex flex-col items-center md:items-start max-w-full md:max-w-[40vw] mb-10 px-5 md:px-20">
             <div class="mt-12 mb-8 h-1 bg-black w-20 rounded-full"></div>
@@ -66,7 +23,7 @@
                 quas nulla magni soluta accusantium error quis numquam labore illum impedit accusamus aspernatur
                 molestiae?
                 Quos?</p>
-            <button class="bg-black text-white text-sm my-6 py-4 px-12">TENTANG KAMI</button>
+            <a href="/about" class="bg-black text-white text-sm my-6 py-4 px-12">TENTANG KAMI</a>
         </div>
         <img src="/assets/img-4-2000x2000.png" alt="food image"
             class="aspect-square absolute -z-10 top-[-25%] md:h-[120vh] md:right-[-20vw] md:top-[-40vh]">
@@ -128,7 +85,7 @@
         </div>
     </section>
 
-    <section id="galery" class="bg-white py-10 my-20 md:my-40 px-5 md:px-20 flex flex-col gap-6">
+    <section id="galery" class="bg-white py-10 mt-20 md:mt-40 px-5 md:px-20 flex flex-col gap-6">
         <h1 class="text-2xl font-bold text-center my-5">GALERI KAMI</h1>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-6 px-5 md:px-20 py-10">
             <img src="/assets/brooke-lark-oaz0raysASk-unsplash.jpg" alt="food image"
