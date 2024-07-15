@@ -6,7 +6,7 @@
         <li><a href="/">HOME</a></li>
         <li><a href="/about">TENTANG</a></li>
         <li><a href="/news">BERITA</a></li>
-        <li><a href="#">GALERI</a></li>
+        <li><a href="/gallery">GALERI</a></li>
         <li><a href="#">KONTAK</a></li>
     </ul>
     <div id="toggle-nav-button"
