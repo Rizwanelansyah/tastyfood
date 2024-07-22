@@ -7,7 +7,7 @@
         <li><a href="/about">TENTANG</a></li>
         <li><a href="/news">BERITA</a></li>
         <li><a href="/gallery">GALERI</a></li>
-        <li><a href="#">KONTAK</a></li>
+        <li><a href="/contact">KONTAK</a></li>
     </ul>
     <div id="toggle-nav-button"
         class="md:hidden h-8 w-10 flex flex-col items-center justify-around z-50 cursor-pointer">

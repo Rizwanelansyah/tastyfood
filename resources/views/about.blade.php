@@ -10,10 +10,7 @@
 
 <body class="bg-primary overflow-x-hidden">
     <x-navbar color="white" class="md:justify-between w-[100vw] absolute top-0 left-0" />
-    <div
-        class="flex flex-row justify-start items-center px-5 py-20 md:p-20 w-[100vw] h-[50vh] md:h-[100vh] bg-cover bg-[url('/assets/group-70.png')]">
-        <h1 class="font-extrabold text-white text-4xl">TENTANG KAMI</h1>
-    </div>
+    <x-page-title title="TENTANG KAMI" />
 
     <section id="about">
         <article class="px-5 md:px-20 py-5 my-20 grid grid-cols-1 md:grid-cols-2 grid-rows-1 gap-16 relative">

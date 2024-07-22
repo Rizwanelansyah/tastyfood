@@ -10,10 +10,7 @@
 
 <body class="bg-primary overflow-x-hidden">
     <x-navbar color="white" class="md:justify-between w-[100vw] absolute top-0 left-0" />
-    <div
-        class="flex flex-row justify-start items-center px-5 py-20 md:p-20 w-[100vw] h-[50vh] md:h-[100vh] bg-cover bg-[url('/assets/group-70.png')]">
-        <h1 class="font-extrabold text-white text-4xl">GALERI KAMI</h1>
-    </div>
+    <x-page-title title="GALERI KAMI" />
 
     <x-image-preview />
 

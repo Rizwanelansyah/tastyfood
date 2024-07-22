@@ -6,3 +6,4 @@ Route::get('/', fn () => view('home'));
 Route::get('/about', fn () => view('about'));
 Route::get('/news', fn () => view('news'));
 Route::get('/gallery', fn () => view('gallery'));
+Route::get('/contact', fn () => view('contact'));
