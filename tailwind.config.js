@@ -8,6 +8,9 @@ export default {
             colors: {
                 'primary': "#f4f4f4",
             },
+            animation: {
+                'spinner': 'spin 200s linear 0s infinite',
+            },
         },
     },
     plugins: [],
