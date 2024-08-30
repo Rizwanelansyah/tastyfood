@@ -8,6 +8,12 @@
         color: white;
         transform: translateY(0%);
     }
+    #admin-nav-menu {
+        transform-origin: top;
+    }
+    #admin-nav-menu.--state-open {
+        transform: translateY(0);
+    }
     #toggle-nav-button.--state-open > * {
         background: white;
     }

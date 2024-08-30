@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tasty Food</title>
-    <link rel="stylesheet" href="/css/app.css" type="text/css">
-</head>
-
-<body class="bg-primary overflow-x-hidden">
-    <x-navbar class="bg-black" color="white" />
+<x-admin>
     <section class="px-20 my-20">
         <h1 class="text-6xl text-black font-extrabold mb-10">Create News</h1>
         @if($errors->any())
@@ -47,7 +36,4 @@
                 type="submit">Save</button>
         </form>
     </section>
-    <x-footer />
-</body>
-
-</html>
+</x-admin>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\News;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\View\View;
 
 class NewsController extends Controller
@@ -41,6 +42,7 @@ class NewsController extends Controller
             $thumbnailFolder = public_path() . '/news-thumbnail';
 
             $req->thumbnail->move($thumbnailFolder, $newName);
+            File::delete(public_path() . '/news-thumbnail/' . $news->thumbnail);
             $news->thumbnail = $newName;
         }
         $news->save();
@@ -49,7 +51,9 @@ class NewsController extends Controller
 
     public function destroy(Request $req): RedirectResponse
     {
-        News::destroy($req->id);
+        $news = News::find($req->id);
+        File::delete(public_path() . '/news-thumbnail/' . $news->thumbnail);
+        News::destroy($news->id);
         return redirect('/admin/news');
     }
 

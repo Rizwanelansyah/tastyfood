@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -26,5 +27,11 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('news');
+        $files = File::files(public_path() . "/news-thumbnail");
+        foreach ($files as $file) {
+            if ($file->getFilename() != "default.png") {
+                File::delete($file->getPathname());
+            }
+        }
     }
 };

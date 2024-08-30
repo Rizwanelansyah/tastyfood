@@ -25,7 +25,7 @@ class InboxController extends Controller
             'message' => $req->message,
         ])->save();
 
-        return redirect()->back();
+        return redirect('/contact')->with('msg', 'Pesan Terkirim');
     }
 
     public function destroy(Request $req): RedirectResponse
