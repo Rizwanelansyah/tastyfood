@@ -10,7 +10,7 @@
 
 <body class="overflow-x-hidden md:overflow-hidden bg-primary">
     <div class="flex flex-col md:flex-row">
-        <section id="sidebar" class="flex flex-col justify-between md:w-1/5 bg-black text-white md:h-[100vh] p-5">
+        <section id="sidebar" class="flex flex-col justify-between md:w-1/5 bg-black text-white md:h-[100vh] p-5 z-50">
             <div>
                 <div class="flex flex-row justify-between md:justify-start gap-2 items-center md:mb-5">
                     <div class="flex flex-row gap-4">
@@ -35,6 +35,10 @@
                         (object) [
                             'name' => 'Inbox',
                             'to' => 'admin/inbox',
+                        ],
+                        (object) [
+                            'name' => 'Galeri',
+                            'to' => 'admin/picture',
                         ],
                     ] as $item)
                         <li class="flex flex-col items-stretch w-full">

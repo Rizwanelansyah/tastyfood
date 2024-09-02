@@ -32,7 +32,8 @@
     <section id="about-us"
         class="flex flex-col gap-8 justify-center items-center py-20 mt-8 text-center bg-white md:mt-20">
         <h1 class="text-2xl font-bold">TENTANG KAMI</h1>
-        <p class="max-w-[70vw] md:max-w-[50vw] text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aliquid
+        <p class="max-w-[70vw] md:max-w-[50vw] text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Expedita aliquid
             dolorem, praesentium culpa repellat
             nesciunt optio laboriosam, architecto at placeat consequuntur non quis tempore maiores sapiente suscipit
             inventore? Earum sunt officia doloremque, laudantium facilis tempora, labore similique dignissimos tempore
@@ -79,21 +80,19 @@
 
     <section id="galery" class="flex flex-col gap-6 px-5 py-10 mt-20 bg-white md:mt-40 md:px-20">
         <h1 class="my-5 text-4xl font-bold text-center">GALERI KAMI</h1>
-        <div class="grid grid-cols-2 gap-6 px-5 py-10 md:grid-cols-3 md:px-20">
-            <img src="/assets/brooke-lark-oaz0raysASk-unsplash.jpg" alt="food image"
-                class="aspect-square w-[100%] object-cover rounded-xl object-center">
-            <img src="/assets/brooke-lark-oaz0raysASk-unsplash.jpg" alt="food image"
-                class="aspect-square w-[100%] object-cover rounded-xl object-center">
-            <img src="/assets/brooke-lark-oaz0raysASk-unsplash.jpg" alt="food image"
-                class="aspect-square w-[100%] object-cover rounded-xl object-center">
-            <img src="/assets/brooke-lark-oaz0raysASk-unsplash.jpg" alt="food image"
-                class="aspect-square w-[100%] object-cover rounded-xl object-center">
-            <img src="/assets/brooke-lark-oaz0raysASk-unsplash.jpg" alt="food image"
-                class="aspect-square w-[100%] object-cover rounded-xl object-center">
-            <img src="/assets/brooke-lark-oaz0raysASk-unsplash.jpg" alt="food image"
-                class="aspect-square w-[100%] object-cover rounded-xl object-center">
-        </div>
-        <a href="/gallery" class="px-8 py-4 mx-auto text-base text-white bg-black">LIHAT LEBIH BANYAK</a>
+        @if (count($pictures) > 0)
+            <div class="grid grid-cols-2 gap-6 px-5 py-10 md:grid-cols-3 md:px-20">
+            @foreach($pictures as $picture)
+                <img src="/pictures/{{ $picture->getFilename() }}" alt="{{ $picture->getFilename() }}"
+                    class="aspect-square w-[100%] object-cover rounded-xl object-center">
+            @endforeach
+            </div>
+            <a href="/gallery" class="px-8 py-4 mx-auto text-base text-white bg-black">LIHAT LEBIH BANYAK</a>
+        @else
+            <div class="flex justify-center items-center h-[50vh]">
+                <p class="text-6xl text-center">Belum ada gambar</p>
+            </div>
+        @endif
     </section>
 
     <x-footer />
