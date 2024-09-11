@@ -12,9 +12,9 @@
     <x-navbar color="white" class="md:justify-between w-[100vw] absolute top-0 left-0" />
     <x-page-title title="GALERI KAMI" />
 
-    <x-image-preview />
+    <x-image-preview :images="['/assets/anna-pelzer-IGfIGP5ONV0-unsplash.jpg', '/assets/fathul-abrar-T-qI_MI2EMA-unsplash.jpg', '/assets/mariana-medvedeva-iNwCO9ycBlc-unsplash.jpg']" />
 
-    <section id="galery" class="bg-white py-10 mt-20 md:mt-40 px-5 md:px-20 flex flex-col gap-6">
+    <section id="galery" class="bg-white py-10 px-5 md:px-20 flex flex-col gap-6">
         @if (count($pictures) > 0)
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 px-5 md:px-20 py-10">
                 @foreach ($pictures as $picture)

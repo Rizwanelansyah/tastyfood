@@ -29,9 +29,7 @@ return new class extends Migration
         Schema::dropIfExists('news');
         $files = File::files(public_path() . "/news-thumbnail");
         foreach ($files as $file) {
-            if ($file->getFilename() != "default.png") {
-                File::delete($file->getPathname());
-            }
+            File::delete($file->getPathname());
         }
     }
 };

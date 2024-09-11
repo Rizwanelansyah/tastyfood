@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use DateTimeZone;
+use App\Models\Picture;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Date;
@@ -13,16 +13,20 @@ class PictureController extends Controller
 {
     public function index(Request $req): View
     {
-        $pictures = File::files(public_path() . "/pictures");
+        $pictures = Picture::all();
         return view('admin.picture.index', compact("pictures"));
     }
 
     public function destroy(Request $req): RedirectResponse
     {
-        $path = public_path() . '/pictures/' . $req->filename;
-        if (File::exists($path)) {
-            File::delete($path);
+        $picture = Picture::find($req->id);
+        if ($picture) {
+            $path = public_path() . "/pictures/" . $picture->image;
+            if (File::exists($path)) {
+                File::delete($path);
+            }
         }
+        Picture::destroy($req->id);
         return redirect('/admin/picture');
     }
 
@@ -30,6 +34,9 @@ class PictureController extends Controller
     {
         foreach ($req->file('pictures') as $picture) {
             $filename = Date::now() . '_' . $picture->getClientOriginalName();
+            Picture::query()->create([
+                "image" => $filename,
+            ])->save();
             $picture->move(public_path() . "/pictures", $filename);
         }
         return redirect('/admin/picture');

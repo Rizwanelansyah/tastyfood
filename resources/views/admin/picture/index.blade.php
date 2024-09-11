@@ -5,7 +5,7 @@
                     ({{ count($pictures) }} Foto)
                 @endif
             </h1>
-            <form action="/picture" method="post" enctype="multipart/form-data">
+            <form action="/picture" method="post" enctype="multipart/form-data" accept="image/*">
                 @csrf
                 <input type="file" multiple name="pictures[]" required>
                 <button type="submit"
@@ -16,19 +16,19 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 px-5 md:px-20 py-10">
                 @foreach ($pictures as $picture)
                     <div class="group relative">
-                        <img src="/pictures/{{ $picture->getFilename() }}" alt="{{ $picture->getFilename() }}"
+                        <img src="/pictures/{{ $picture->image }}" alt="{{ $picture->image }}"
                             class="aspect-square w-[100%] object-cover rounded-xl object-center">
                         <form method="post" action="/picture"
                             class="absolute top-0 right-0 p-2 hidden group-hover:block">
                             @csrf
                             @method('DELETE')
-                            <input type="hidden" class="hidden" name="filename" value="{{ $picture->getFilename() }}">
+                            <input type="hidden" class="hidden" name="id" value="{{ $picture->id }}">
                             <button type="submit"
                                 class="bg-black/40 text-2xl text-red-600 font-bold rounded-lg p-1">X</button>
                         </form>
                         <div class="absolute bottom-0 left-0 p-2 w-full hidden group-hover:block">
                             <p class="bg-black/40 text-white rounded-lg p-2">
-                                {{ $picture->getFilename() }}</p>
+                                {{ $picture->image }}</p>
                         </div>
                     </div>
                 @endforeach

@@ -8,24 +8,108 @@
         color: white;
         transform: translateY(0%);
     }
+
     #admin-nav-menu {
         transform-origin: top;
     }
+
     #admin-nav-menu.--state-open {
         transform: translateY(0);
     }
-    #toggle-nav-button.--state-open > * {
+
+    #toggle-nav-button.--state-open>* {
         background: white;
     }
-    #toggle-nav-button.--state-open > :first-child {
+
+    #toggle-nav-button.--state-open> :first-child {
         transform-origin: top left;
         transform: rotate(45deg);
     }
-    #toggle-nav-button.--state-open > :nth-child(2) {
+
+    #toggle-nav-button.--state-open> :nth-child(2) {
         transform: scaleY(0);
     }
-    #toggle-nav-button.--state-open > :last-child {
-        transform-origin:bottom left;
+
+    #toggle-nav-button.--state-open> :last-child {
+        transform-origin: bottom left;
         transform: rotate(-45deg);
+    }
+}
+
+.slideshow-child {
+    display: none;
+}
+
+.slideshow-prev,
+.slideshow-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    transition: 0.6s ease;
+    border-radius: 0 100% 100% 0;
+    user-select: none;
+    text-shadow: 0 0 10px black;
+}
+
+.slideshow-prev {
+    padding-left: 10px;
+}
+.slideshow-next {
+    padding-right: 10px;
+    right: 0;
+    border-radius: 100% 0 0 100%;
+}
+
+.slideshow-prev:hover,
+.slideshow-next:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slideshow-text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.slideshow-dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.slideshow-active,
+.slideshow-dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.slideshow-fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
     }
 }

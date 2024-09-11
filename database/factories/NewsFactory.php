@@ -19,7 +19,7 @@ class NewsFactory extends Factory
         return [
             'title' => fake()->text(30),
             'content' => fake()->text(),
-            'thumbnail' => 'default.png',
+            'thumbnail' => fake()->image(public_path() . "/news-thumbnail", 400, 300, "food", false),
         ];
     }
 }

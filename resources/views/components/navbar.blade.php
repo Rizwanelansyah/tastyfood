@@ -15,7 +15,6 @@
             @endif
         @else
             <li><a href="/login">LOGIN</a></li>
-            <li><a href="/register">REGISTER</a></li>
         @endif
     </ul>
     <div id="toggle-nav-button"

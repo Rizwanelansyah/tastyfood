@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\News;
+use App\Models\Picture;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -15,6 +16,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         News::factory()->count(10)->create();
+        Picture::factory()->count(20)->create();
         User::factory()->make([
             'name' => 'Admin',
             'type' => 'admin',

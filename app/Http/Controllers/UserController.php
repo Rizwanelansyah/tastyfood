@@ -42,38 +42,6 @@ class UserController extends Controller
         return redirect('/');
     }
 
-    public function register(Request $req): View
-    {
-        return view('register');
-    }
-
-    public function store(Request $req): RedirectResponse
-    {
-        $req->validate([
-            'email' => 'bail|required|email',
-            'username' => 'bail|required|min:5|max:255',
-            'password' => 'bail|required|min:8',
-            'confirm_password' => 'bail|required',
-        ]);
-        if ($req->password !== $req->confirm_password) {
-            return redirect('/register')->withErrors([
-                'msg' => 'Password didn\'t match try again',
-            ])->withInput();
-        }
-        if (User::query()->make([
-            'email' => $req->email,
-            'name' => $req->username,
-            'password' => Hash::make($req->password),
-            'type' => 'user',
-        ])->save()) {
-            return redirect('/login')->with('msg', 'New user created, you can login now!');
-        } else {
-            return redirect('/register')->withErrors([
-                'msg' => "Something went wrong, cannot create new user"
-            ])->withInput();
-        }
-    }
-
     public function admin(Request $req): View
     {
         return view('admin.dashboard');

@@ -1,6 +1,6 @@
 <footer class="bg-black text-white p-6 md:p-24 pb-10 flex flex-col gap-10">
     <div class="flex flex-col md:flex-row gap-10 justify-between items-start">
-        <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-6 w-2/5">
             <h1 class="text-2xl font-bold">Tasty Food</h1>
             <p class="text-sm text-gray-400">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, illum veniam! Repellat itaque

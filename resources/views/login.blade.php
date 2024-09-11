@@ -28,8 +28,6 @@
                         class="bg-blue-700 hover:bg-blue-500 text-white hover:text-black text-lg py-2 px-5 rounded-xl w-full duration-300">
                         Login
                     </button>
-                    <p class="text-sm mt-5 text-center">Didn't have any account yet? <a href="/register"
-                            class="text-blue-500">Resgister</a></p>
                 </label>
             </form>
         </div>
