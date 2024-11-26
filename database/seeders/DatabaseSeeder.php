@@ -15,8 +15,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        News::factory()->count(10)->create();
-        Picture::factory()->count(20)->create();
+        News::factory()->count(5)->create();
+        Picture::factory()->count(4)->create();
         User::factory()->make([
             'name' => 'Admin',
             'type' => 'admin',
