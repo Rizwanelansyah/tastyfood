@@ -36,6 +36,6 @@ class InboxController extends Controller
 
     public function index(): View
     {
-        return view('admin.inbox.index', ['inboxes' => Inbox::all()]);
+        return view('admin.inbox.index', ['inboxes' => Inbox::all()->sortByDesc('created_at')]);
     }
 }

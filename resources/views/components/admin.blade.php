@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/app.css" type="text/css">
 </head>
 
-<body class="overflow-x-hidden md:overflow-hidden bg-primary">
+<body class="overflow-x-hidden md:overflow-hidden bg-primary text-black">
     <div class="flex flex-col md:flex-row">
         <section id="sidebar" class="flex flex-col justify-between md:w-1/5 bg-black text-white md:h-[100vh] p-5 z-50">
             <div>

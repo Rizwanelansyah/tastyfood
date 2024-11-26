@@ -13,7 +13,7 @@ class PictureController extends Controller
 {
     public function index(Request $req): View
     {
-        $pictures = Picture::all();
+        $pictures = Picture::all()->sortByDesc('created_at');
         return view('admin.picture.index', compact("pictures"));
     }
 

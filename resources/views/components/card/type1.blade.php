@@ -1,8 +1,8 @@
-<div class="flex flex-col gap-4 relative">
-    <img src="{{ $src }}" alt="image for card" class="absolute -top-1/2">
-    <div class="bg-white px-4 pb-5 pt-[60%] rounded-lg">
-        <h2 class="text-center text-2xl font-bold"> {{ $title }} </h2>
-        <p class="text-sm text-center line-clamp-2">
+<div class="bg-white rounded-lg xl:rounded-xl mt-[50%]">
+    <img src="{{ $src }}" alt="image for card" class="-mt-[50%]">
+    <div class="-mt-10 p-10">
+        <h2 class="text-center text-2xl xl:text-4xl font-bold mb-4"> {{ $title }} </h2>
+        <p class="text-md xl:text-lg text-center line-clamp-2">
             {{ $slot }}
         </p>
     </div>

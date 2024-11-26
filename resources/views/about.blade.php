@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/app.css" type="text/css">
 </head>
 
-<body class="bg-primary overflow-x-hidden">
+<body class="bg-primary overflow-x-hidden text-hidden text-black">
     <x-navbar color="white" class="md:justify-between w-[100vw] absolute top-0 left-0" />
     <x-page-title title="TENTANG KAMI" />
 
@@ -16,13 +16,13 @@
         <article class="px-5 md:px-20 py-5 my-20 grid grid-cols-1 md:grid-cols-2 grid-rows-1 gap-16 relative">
             <div class="md:hidden absolute size-full bg-gradient-to-r from-transparent via-primary to-transparent md:bg-transparent z-20"></div>
             <div class="flex flex-col justify-center py-6 gap-6 z-30 text-center md:text-start">
-                <h1 class="text-xl md:text-4xl font-bold">Tasty Food</h1>
-                <p class="text-md md:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione distinctio
+                <h1 class="text-xl xl:text-6xl font-bold">Tasty Food</h1>
+                <p class="text-md bg-white/50 md:bg-transparent xl:text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione distinctio
                     consequatur
                     necessitatibus
                     mollitia perferendis enim provident reiciendis cum molestias corporis perspiciatis quae, error quam
                     deleniti repellendus adipisci! Asperiores, veritatis a.</p>
-                <p class="text-md md:text-xl text-gray-600 z-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+                <p class="text-md bg-white/50 md:bg-transparent xl:text-2xl text-gray-800 z-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
                     distinctio consequatur
                     necessitatibus
                     mollitia perferendis enim provident reiciendis cum molestias corporis perspiciatis quae, error quam
@@ -45,13 +45,13 @@
                     src="/assets/michele-blackwell-rAyCBQTH7ws-unsplash.jpg" alt="img">
             </div>
             <div class="flex flex-col justify-center py-6 gap-6 z-30 text-center md:text-start">
-                <h1 class="text-xl md:text-4xl font-bold">Visi</h1>
-                <p class="text-md md:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione distinctio
+                <h1 class="text-xl xl:text-6xl font-bold">Visi</h1>
+                <p class="text-md bg-white/50 md:bg-transparent xl:text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione distinctio
                     consequatur
                     necessitatibus
                     mollitia perferendis enim provident reiciendis cum molestias corporis perspiciatis quae, error quam
                     deleniti repellendus adipisci! Asperiores, veritatis a.</p>
-                <p class="text-md md:text-xl text-gray-600 z-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+                <p class="text-md bg-white/50 md:bg-transparent xl:text-2xl text-gray-800 z-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
                     distinctio consequatur
                     necessitatibus
                     mollitia perferendis enim provident reiciendis cum molestias corporis perspiciatis quae, error quam
@@ -62,19 +62,19 @@
         <article class="px-5 md:px-20 py-5 my-20 grid grid-cols-1 md:grid-cols-2 grid-rows-1 gap-16 relative">
             <div class="md:hidden absolute size-full bg-gradient-to-r from-transparent via-primary to-transparent md:bg-transparent z-20"></div>
             <div class="flex flex-col justify-center py-6 gap-6 z-30 text-center md:text-start">
-                <h1 class="text-xl md:text-4xl font-bold">Misi</h1>
-                <p class="text-md md:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione distinctio
+                <h1 class="text-xl xl:text-6xl font-bold">Misi</h1>
+                <p class="text-md bg-white/50 md:bg-transparent xl:text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione distinctio
                     consequatur
                     necessitatibus
                     mollitia perferendis enim provident reiciendis cum molestias corporis perspiciatis quae, error quam
                     deleniti repellendus adipisci! Asperiores, veritatis a.</p>
-                <p class="text-md md:text-xl text-gray-600 z-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+                <p class="text-md bg-white/50 md:bg-transparent xl:text-2xl text-gray-800 z-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
                     distinctio consequatur
                     necessitatibus
                     mollitia perferendis enim provident reiciendis cum molestias corporis perspiciatis quae, error quam
                     deleniti repellendus adipisci! Asperiores, veritatis a.</p>
             </div>
-            <div class="absolute md:static h-full md:h-[unset] p-5 md:p-0 md:flex md:justify-center md:items-center">
+            <div class="absolute md:static h-full md:h-[unset] w-full md:w-[unset] p-5 md:p-0 md:flex md:justify-center md:items-center">
                 <img class="shdow-md rounded-xl size-full md:h-2/3 object-cover"
                     src="/assets/sanket-shah-SVA7TyHxojY-unsplash.jpg" alt="img">
             </div>

@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="/css/app.css" type="text/css">
 </head>
 
-<body class="overflow-x-hidden bg-primary">
-    <div class="mx-10 md:mx-96 my-20 md:my-40">
+<body class="overflow-x-hidden bg-primary text-black">
+    <div class="flex flex-col justify-center items-center px-10 md:px-96 py-20 md:py-40 h-[100vh]">
         <x-messages />
-        <div class="bg-white rounded-xl shadow-xl p-20">
+        <div class="bg-white rounded-xl shadow-xl p-8 md:p-12 xl:p-20">
             <div class="flex flex-row items-center p-2 gap-3">
-                <a href="javascript:history.back()" class="text-4xl font-bold text-blue-700">&lt;</a>
-                <h1 class="text-5xl font-bold text-black">Login</h1>
+                <a href="/" class="text-2xl xl:text-4xl font-bold text-blue-700">&lt;</a>
+                <h1 class="text-3xl xl:text-5xl font-bold text-black">Login</h1>
             </div>
             <div class="mb-5 my-4 h-0.5 rounded-xl bg-gray-500"></div>
             <form method="post" action="/login">
@@ -32,7 +32,6 @@
             </form>
         </div>
     </div>
-    <x-footer />
 </body>
 
 </html>

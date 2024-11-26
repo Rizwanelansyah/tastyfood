@@ -3,7 +3,7 @@
 
     @for($i = 0; $i < count($images); $i++)
       <div class="slideshow-child slideshow-fade">
-        <img class="aspect-video object-cover max-h-[80vh] rounded-xl" src="{{ $images[$i] }}" style="width:100%">
+        <img class="aspect-video object-contain max-h-[80vh] rounded-xl" src="{{ $images[$i] }}" style="width:100%">
       </div>
     @endfor
 

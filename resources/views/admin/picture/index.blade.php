@@ -18,7 +18,7 @@
                     <div class="group relative">
                         <img src="/pictures/{{ $picture->image }}" alt="{{ $picture->image }}"
                             class="aspect-square w-[100%] object-cover rounded-xl object-center">
-                        <form method="post" action="/picture"
+                        <form method="post" action="/picture" onsubmit="return confirm('Do You Realy wanna delete Picture \'{{ $picture->image }}\'')"
                             class="absolute top-0 right-0 p-2 hidden group-hover:block">
                             @csrf
                             @method('DELETE')

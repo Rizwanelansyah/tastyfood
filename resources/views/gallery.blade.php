@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/app.css" type="text/css">
 </head>
 
-<body class="bg-primary overflow-x-hidden">
+<body class="bg-primary overflow-x-hidden text-black">
     <x-navbar color="white" class="md:justify-between w-[100vw] absolute top-0 left-0" />
     <x-page-title title="GALERI KAMI" />
 

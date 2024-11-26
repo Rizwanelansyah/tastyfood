@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/css/app.css" type="text/css">
 </head>
 
-<body class="bg-primary overflow-x-hidden">
+<body class="bg-primary overflow-x-hidden text-black">
   <x-navbar color="white" class="md:justify-between w-[100vw] absolute top-0 left-0" />
   <x-page-title title="KONTAK KAMI" />
 
@@ -33,17 +33,17 @@
 
     <div class="flex flex-row justify-evenly py-10 my-10">
       <div class="flex flex-col gap-4 items-center">
-        <img src="/assets/Group 66.png" alt="mail icon" class="size-20 md:size-[unset]">
+        <img src="/assets/Group 66.png" alt="mail icon" class="size-20">
         <h1 class="font-bold text-lg">email</h1>
         <p>some@email.com</p>
       </div>
       <div class="flex flex-col gap-4 items-center">
-        <img src="/assets/Group 67.png" alt="mail icon" class="size-20 md:size-[unset]">
+        <img src="/assets/Group 67.png" alt="mail icon" class="size-20">
         <h1 class="font-bold text-lg">telepon</h1>
         <p>+62 1234 5432 2343</p>
       </div>
       <div class="flex flex-col gap-4 items-center">
-        <img src="/assets/Group 68.png" alt="mail icon" class="size-20 md:size-[unset]">
+        <img src="/assets/Group 68.png" alt="mail icon" class="size-20">
         <h1 class="font-bold text-lg">lokasi</h1>
         <p>dimana?</p>
       </div>
@@ -53,7 +53,7 @@
   <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.558806840755!2d107.66140701036342!3d-6.943211393027936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7c381e3c323%3A0x5f5160f6c9796e4b!2sCyberLabs!5e0!3m2!1sen!2sid!4v1722998621647!5m2!1sen!2sid"
     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-    class="w-full h-[80vh] my-20 px-20"></iframe>
+    class="w-full h-[80vh] my-8 md:my-20 px-8 md:px-20"></iframe>
 
   <x-footer />
 </body>

@@ -1,21 +1,30 @@
 <nav id="navbar"
-    class="md:h-[20vh] flex flex-row justify-between md:justify-start items-center gap-10 py-4 px-5 md:py-8 md:px-20 text-{{ $color }} {{ $class }}">
-    <h1 class="font-bold text-2xl">TASTY FOOD</h1>
+    class="md:h-[20vh] flex flex-row justify-between md:justify-start items-center gap-16 py-4 px-5 md:py-8 md:px-20 text-{{ $color }} {{ $class }}">
+    <h1 class="font-bold text-2xl md:text-5xl md:text-bold">TASTY FOOD</h1>
     <ul id="nav-menu"
-        class="text-sm flex flex-col px-5 py-10 md:p-0 md:flex-row justify-center items-center gap-8 absolute top-0 left-0 md:static w-full md:w-[unset] transition-all duration-300 translate-y-[-100%] md:transform-none">
-        <li><a href="/">HOME</a></li>
-        <li><a href="/about">TENTANG</a></li>
-        <li><a href="/news">BERITA</a></li>
-        <li><a href="/gallery">GALERI</a></li>
-        <li><a href="/contact">KONTAK</a></li>
-        @if (Auth::check())
-            <li>({{ Auth::user()->name }}) <a href="/logout">LOGOUT</a></li>
-            @if (Auth::user()->type == 'admin')
-                <li><a href="/admin">DASHBOARD</a></li>
-            @endif
-        @else
-            <li><a href="/login">LOGIN</a></li>
-        @endif
+        class="text-sm md:text-xl flex flex-col px-5 py-10 md:p-0 md:flex-row justify-center items-center gap-8 absolute top-0 left-0 md:static w-full md:w-[unset] transition-all duration-300 translate-y-[-100%] md:transform-none">
+        @php
+            $links = [
+                ["HOME", ""],
+                ["TENTANG", "about"],
+                ["BERITA", "news"],
+                ["GALERI", "gallery"],
+                ["KONTAK", "contact"],
+            ];
+
+            if (Auth::check()) {
+                $links[] = ["LOGOUT", "logout"];
+                if (Auth::user()->type == 'admin') {
+                    $links[] = ["DASHBOARD", "admin"];
+                }
+            } else {
+                $links[] = ["LOGIN", "login"];
+            }
+        @endphp
+
+        @foreach($links as $link)
+            <li class="bg-primary @if($color !== 'black') bg-transparent @endif rounded-md py-1 px-2 hover:bg-black hover:text-primary transition duration-300"><a href="/{{ $link[1] }}">{{ $link[0] }}</a></li>
+        @endforeach
     </ul>
     <div id="toggle-nav-button"
         class="md:hidden h-8 w-10 flex flex-col items-center justify-around z-50 cursor-pointer">

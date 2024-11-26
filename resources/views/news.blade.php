@@ -8,26 +8,26 @@
         <link rel="stylesheet" href="/css/app.css" type="text/css">
     </head>
 
-    <body class="overflow-x-hidden bg-primary">
+    <body class="overflow-x-hidden bg-primary text-black">
         <x-navbar color="white" class="md:justify-between w-[100vw] absolute top-0 left-0" />
             <x-page-title title="BERITA KAMI" />
 
                 <section id="news" class="grid relative grid-cols-1 grid-rows-1 gap-16 px-5 py-5 my-20 md:px-20 md:grid-cols-2">
                     <div
-                        class="absolute z-20 bg-gradient-to-b from-transparent md:hidden size-full to-primary md:bg-transparent">
+                        class="absolute top-8 z-20 bg-gradient-to-b from-transparent md:hidden size-full to-primary md:bg-transparent">
                     </div>
-                    <div class="absolute md:static h-full md:h-[unset] p-5 md:p-0">
-                        <img class="object-cover rounded-xl shdow-md size-full"
+                    <div class="absolute md:static md:h-[unset] p-5 md:p-0">
+                        <img class="object-cover rounded-xl aspect-square w-full md:size-[50vw]"
                         src="/assets/mariana-medvedeva-iNwCO9ycBlc-unsplash.jpg" alt="img">
                     </div>
                     <div class="flex z-30 flex-col gap-6 justify-center py-6 text-center md:text-start">
                         <h1 class="text-xl md:text-4xl font-bold">APA SAJA MAKANAN KHAS NUSANTARA?</h1>
-                        <p class="z-10 text-md md:text-xl md:text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+                        <p class="z-10 text-md bg-white/50 md:bg-transparent xl:text-xl md:text-gray-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
                         distinctio consequatur
                         necessitatibus
                         mollitia perferendis enim provident reiciendis cum molestias corporis perspiciatis quae, error quam
                         deleniti repellendus adipisci! Asperiores, veritatis a.</p>
-                        <p class="z-10 text-md md:text-xl md:text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+                        <p class="z-10 text-md bg-white/50 md:bg-transparent xl:text-xl md:text-gray-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
                         distinctio consequatur
                         necessitatibus
                         mollitia perferendis enim provident reiciendis cum molestias corporis perspiciatis quae, error quam

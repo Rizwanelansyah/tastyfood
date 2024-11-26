@@ -9,6 +9,11 @@
         transform: translateY(0%);
     }
 
+    #nav-menu.--state-open * {
+        color: white;
+        background: black;
+    }
+
     #admin-nav-menu {
         transform-origin: top;
     }

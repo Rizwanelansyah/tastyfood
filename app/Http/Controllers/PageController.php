@@ -10,7 +10,7 @@ class PageController extends Controller
 {
     public function home(): View
     {
-        $news = News::all();
+        $news = News::all()->sortByDesc('created_at');
         $news_count = $news->count();
         $pictures = File::files(public_path() . '/pictures');
         $pictures_count = count($pictures);
